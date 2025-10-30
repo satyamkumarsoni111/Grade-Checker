@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(56, 143, 237);
+            font-family:cursive;
+            margin-top:100px;
+            margin-left:680px;
+        }
+        button{
+            background-color:rgb(3, 164, 3);
+            color:white;
+            border-radius:10px;
+            margin-left:60px;
+            border:1px solid rgb(3, 164, 3);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function gradeChecker() {
+            let name = prompt("Enter your name:");
+            let age = prompt("Enter your age:");
+            let marks = prompt("Enter your score:");
+
+            marks = Number(marks);
+            let grade;
+            if(marks > 100 || marks < 0){
+                alert("Invalid marks");
+            }
+            else{
+                if(marks < 50){
+                    grade = "Failed";
+                }
+                else if(marks >= 50 && marks <= 70){
+                    grade = "C";
+                }
+                else if(marks > 70 && marks < 80){
+                    grade = "B";
+                }
+                else if(marks >= 80 && marks <= 90){
+                    grade = "A";
+                }
+                else{
+                    grade = "A+";
+                }
+                alert(`${name}, Age is ${age} got Grade ${grade}.`);
+            }
+        }
+    </script>
+    <h1>
+        Grade Checker!
+    </h1>
+    <button onclick="gradeChecker()">Know Your Grade</button>
+</body>
+</html>
